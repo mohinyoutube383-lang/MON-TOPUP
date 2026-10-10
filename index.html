@@ -147,26 +147,26 @@
 
       <label class="package">
         <input type="radio" name="pack"
-          value="100 Diamonds" data-price="80" checked>
-        100 Diamonds — ৳80
+          value="100 Diamonds" data-price="75" checked>
+        100 Diamonds — ৳75
       </label>
 
       <label class="package">
         <input type="radio" name="pack"
-          value="310 Diamonds" data-price="230">
-        310 Diamonds — ৳230
+          value="310 Diamonds" data-price="225">
+        310 Diamonds — ৳225
       </label>
 
       <label class="package">
         <input type="radio" name="pack"
-          value="520 Diamonds" data-price="380">
-        520 Diamonds — ৳380
+          value="520 Diamonds" data-price="375">
+        520 Diamonds — ৳375
       </label>
 
       <label class="package">
         <input type="radio" name="pack"
-          value="1060 Diamonds" data-price="750">
-        1060 Diamonds — ৳750
+          value="1060 Diamonds" data-price="754">
+        1060 Diamonds — ৳745
       </label>
 
       <p class="note">
@@ -191,7 +191,7 @@
 
         <label for="contact">যোগাযোগের নম্বর</label>
         <input id="contact" type="tel"
-          maxlength="20" placeholder="01XXXXXXXXX" required>
+          maxlength="20" placeholder="01810214474" required>
 
         <button type="submit">
           📲 WhatsApp-এ অর্ডার করুন
@@ -206,20 +206,20 @@
         অর্ডার নিশ্চিত করা হবে। পেমেন্টের আগে মূল্য,
         ডেলিভারি এবং সরবরাহকারীর বৈধতা যাচাই করুন।
         এই ওয়েবসাইটটি একটি স্বাধীন অর্ডার পেজ;
-        এটি Garena-র অফিসিয়াল ওয়েবসাইট নয়।
+        এটি Garena-র অফিসিয়াল ওয়েবসাইট। 
       </p>
     </section>
   </main>
 
   <footer>
-    © 2026 Diamond Zone | Independent fan-made store
+    © 2026 MOHIN TOPUP ZONE | Independent fan-made store
   </footer>
 
   <script>
     // এখানে নিজের WhatsApp নম্বর বসাও।
     // বাংলাদেশের নম্বর হলে 880 দিয়ে শুরু করবে,
     // শুরুর 0 বাদ দেবে। যেমন: 8801XXXXXXXXX
-    const WHATSAPP_NUMBER = "8801XXXXXXXXX";
+    const WHATSAPP_NUMBER = "8801819214474";
 
     const form = document.getElementById("orderForm");
 
@@ -242,7 +242,7 @@
         return;
       }
 
-      if (WHATSAPP_NUMBER === "8801XXXXXXXXX") {
+      if (WHATSAPP_NUMBER === "8801819214474") {
         alert("প্রথমে কোডে নিজের WhatsApp নম্বর বসান।");
         return;
       }
@@ -250,7 +250,7 @@
       const price = selected.dataset.price;
 
       const message =
-        "💎 DIAMOND ZONE - NEW ORDER\n\n" +
+        "💎 MOHIN TOPUP - NEW ORDER\n\n" +
         "Player UID: " + uid + "\n" +
         "Customer Name: " + name + "\n" +
         "Contact: " + contact + "\n" +
