@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Zone | Free Fire Top-up</title>
+  <meta name="description" content="Free Fire diamond top-up order website">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0d14;
+      color: #fff;
+    }
+
+    header {
+      background: #151925;
+      padding: 18px 12px;
+      text-align: center;
+      border-bottom: 2px solid #ff8a00;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #ff9d22;
+      font-size: 26px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      color: #c8cbd5;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(140deg, #202943, #10121c);
+    }
+
+    .hero h2 { font-size: 25px; margin: 0 0 10px; }
+    .hero p { color: #d4d7e0; line-height: 1.6; }
+
+    .container {
+      max-width: 520px;
+      margin: 22px auto;
+      padding: 20px;
+    }
+
+    .panel {
+      background: #171b28;
+      border: 1px solid #30374a;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: #ffab38;
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 7px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #41485c;
+      border-radius: 8px;
+      background: #0d111b;
+      color: white;
+      font-size: 16px;
+    }
+
+    .package {
+      display: block;
+      padding: 13px;
+      margin: 10px 0;
+      background: #22283a;
+      border: 1px solid #343d54;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+
+    .package input {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    .package:has(input:checked) {
+      border-color: #ff9d22;
+      background: #342719;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: 0;
+      border-radius: 9px;
+      background: #16a765;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 18px;
+    }
+
+    button:hover { background: #118653; }
+
+    .note {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #b9c0d0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px 12px;
+      color: #aeb4c3;
+      font-size: 13px;
+    }
+
+    a { color: #ffb34d; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💎 DIAMOND ZONE</h1>
+    <p>Free Fire Diamond Top-up</p>
+  </header>
+
+  <section class="hero">
+    <h2>Diamond Top-up Order</h2>
+    <p>আপনার Player UID ও প্যাকেজ নির্বাচন করুন।<br>
+    অর্ডার WhatsApp-এ পাঠিয়ে দিন।</p>
+  </section>
+
+  <main class="container">
+    <section class="panel">
+      <h3>💎 Diamond প্যাকেজ</h3>
+
+      <label class="package">
+        <input type="radio" name="pack"
+          value="100 Diamonds" data-price="80" checked>
+        100 Diamonds — ৳80
+      </label>
+
+      <label class="package">
+        <input type="radio" name="pack"
+          value="310 Diamonds" data-price="230">
+        310 Diamonds — ৳230
+      </label>
+
+      <label class="package">
+        <input type="radio" name="pack"
+          value="520 Diamonds" data-price="380">
+        520 Diamonds — ৳380
+      </label>
+
+      <label class="package">
+        <input type="radio" name="pack"
+          value="1060 Diamonds" data-price="750">
+        1060 Diamonds — ৳750
+      </label>
+
+      <p class="note">
+        এগুলো শুধু নমুনা মূল্য। প্রকাশের আগে নিজের
+        প্রকৃত মূল্য দিয়ে পরিবর্তন করুন।
+      </p>
+    </section>
+
+    <section class="panel">
+      <h3>📝 অর্ডার ফর্ম</h3>
+
+      <form id="orderForm">
+        <label for="playerUID">Free Fire Player UID</label>
+        <input id="playerUID" type="text"
+          inputmode="numeric" maxlength="25"
+          placeholder="আপনার Player UID লিখুন"
+          required>
+
+        <label for="playerName">আপনার নাম</label>
+        <input id="playerName" type="text"
+          maxlength="60" placeholder="নাম লিখুন" required>
+
+        <label for="contact">যোগাযোগের নম্বর</label>
+        <input id="contact" type="tel"
+          maxlength="20" placeholder="01XXXXXXXXX" required>
+
+        <button type="submit">
+          📲 WhatsApp-এ অর্ডার করুন
+        </button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h3>ℹ️ গুরুত্বপূর্ণ তথ্য</h3>
+      <p class="note">
+        অর্ডার পাঠানোর পর WhatsApp-এ তথ্য যাচাই করে
+        অর্ডার নিশ্চিত করা হবে। পেমেন্টের আগে মূল্য,
+        ডেলিভারি এবং সরবরাহকারীর বৈধতা যাচাই করুন।
+        এই ওয়েবসাইটটি একটি স্বাধীন অর্ডার পেজ;
+        এটি Garena-র অফিসিয়াল ওয়েবসাইট নয়।
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Diamond Zone | Independent fan-made store
+  </footer>
+
+  <script>
+    // এখানে নিজের WhatsApp নম্বর বসাও।
+    // বাংলাদেশের নম্বর হলে 880 দিয়ে শুরু করবে,
+    // শুরুর 0 বাদ দেবে। যেমন: 8801XXXXXXXXX
+    const WHATSAPP_NUMBER = "8801XXXXXXXXX";
+
+    const form = document.getElementById("orderForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const uid = document.getElementById("playerUID")
+        .value.trim();
+      const name = document.getElementById("playerName")
+        .value.trim();
+      const contact = document.getElementById("contact")
+        .value.trim();
+
+      const selected = document.querySelector(
+        'input[name="pack"]:checked'
+      );
+
+      if (!uid || !name || !contact || !selected) {
+        alert("সব তথ্য পূরণ করুন।");
+        return;
+      }
+
+      if (WHATSAPP_NUMBER === "8801XXXXXXXXX") {
+        alert("প্রথমে কোডে নিজের WhatsApp নম্বর বসান।");
+        return;
+      }
+
+      const price = selected.dataset.price;
+
+      const message =
+        "💎 DIAMOND ZONE - NEW ORDER\n\n" +
+        "Player UID: " + uid + "\n" +
+        "Customer Name: " + name + "\n" +
+        "Contact: " + contact + "\n" +
+        "Package: " + selected.value + "\n" +
+        "Listed Price: ৳" + price + "\n\n" +
+        "দয়া করে অর্ডারটি যাচাই করুন।";
+
+      const url = "https://wa.me/" +
+        WHATSAPP_NUMBER + "?text=" +
+        encodeURIComponent(message);
+
+      window.open(url, "_blank", "noopener");
+    });
+  </script>
+
+</body>
+</html>
