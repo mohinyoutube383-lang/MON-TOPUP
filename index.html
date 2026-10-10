@@ -1,387 +1,408 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080d20">
-<title>MOHIN TOP UP | Free Fire Diamonds</title>
-
-<style>
-*{box-sizing:border-box}
-body{
- margin:0;background:#080d19;color:#fff;
- font-family:Arial,"Noto Sans Bengali",sans-serif
-}
-header{
- padding:20px 12px;text-align:center;
- background:#111a36;border-bottom:2px solid #514dff
-}
-.logo{font-size:27px;font-weight:900;color:#ffe34d}
-header p{color:#cbd5ff;margin-bottom:0}
-.hero{
- padding:30px 16px;text-align:center;
- background:radial-gradient(circle at top,#293d91,#10152c 70%)
-}
-.hero h1{font-size:28px}
-.hero p{color:#d7ddf8;line-height:1.8}
-.banner{
- display:block;width:100%;max-width:900px;
- height:auto;max-height:300px;object-fit:cover;
- border-radius:16px;margin:0 auto 18px
-}
-.tag{
- display:inline-block;background:#ffe34d;color:#111;
- padding:9px 15px;border-radius:20px;font-weight:bold
-}
-.container{max-width:700px;margin:auto;padding:16px}
-.panel{
- background:#151c31;border:1px solid #343e60;
- border-radius:18px;padding:18px;margin:16px 0
-}
-h2{font-size:21px;color:#ffe34d;margin:0 0 18px}
-.packages{
- display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
- gap:10px
-}
-.package{
- display:block;border:1px solid #414b72;
- border-radius:12px;padding:15px 8px;
- text-align:center;cursor:pointer;background:#202943
-}
-.package input{accent-color:#ffe34d}
-.package:has(input:checked){
- border:2px solid #ffe34d;background:#302a2c
-}
-.diamonds{display:block;font-size:17px;font-weight:bold;margin:8px 0}
-.price{color:#ffe34d;font-weight:bold;font-size:19px}
-.field{display:block;margin:15px 0 7px;font-weight:bold}
-input[type=text],input[type=tel]{
- width:100%;padding:14px;border-radius:10px;
- border:1px solid #4a5473;background:#0c1223;
- color:white;font-size:16px
-}
-.btn{
- display:block;width:100%;padding:14px;border:0;
- border-radius:12px;background:#12c765;color:white;
- font-size:16px;font-weight:bold;cursor:pointer;margin-top:14px
-}
-.btn:disabled{opacity:.45;cursor:not-allowed}
-.coins{
- background:linear-gradient(135deg,#162c4d,#262052);
- border:1px solid #5366a7;border-radius:16px;padding:16px
-}
-.balance{
- font-size:36px;color:#ffe34d;font-weight:bold;
- text-align:center;margin:12px 0
-}
-.stats{
- display:grid;grid-template-columns:1fr 1fr;
- gap:10px;margin:14px 0
-}
-.stat{
- background:#101a30;padding:13px;border-radius:12px;text-align:center
-}
-.stat strong{display:block;font-size:22px;color:#ffe34d;margin-top:6px}
-.note{font-size:13px;color:#b7c1df;line-height:1.8}
-.warning{
- padding:12px;background:#33291b;border:1px solid #81662d;
- border-radius:10px;color:#ffe5a0;font-size:13px;line-height:1.7
-}
-.features{
- display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
- gap:8px;text-align:center
-}
-.feature{
- background:#202943;padding:13px 5px;
- border-radius:10px;font-size:13px;line-height:1.7
-}
-footer{text-align:center;color:#9da9cb;padding:25px 10px;font-size:13px}
-@media(max-width:360px){
- .packages{grid-template-columns:1fr}
- .hero h1{font-size:23px}.logo{font-size:23px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10101b">
+  <title>MOHIN TOP UP | Free Fire Diamonds</title>
+  <style>
+    :root {
+      --bg:#10101b; --card:#1c1c2c; --accent:#ffb703;
+      --text:#fff; --muted:#b8b8cc; --line:#343449;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family:Arial,sans-serif; background:var(--bg);
+      color:var(--text);
+    }
+    header {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:15px; background:#181827; border-bottom:1px solid var(--line);
+      position:sticky; top:0; z-index:5;
+    }
+    .logo { font-weight:900; color:var(--accent); font-size:19px; }
+    button {
+      border:0; border-radius:10px; padding:12px 15px;
+      background:var(--accent); color:#171717; font-weight:bold;
+      cursor:pointer;
+    }
+    button:disabled { opacity:.5; }
+    .secondary { background:#343449; color:white; }
+    .wrap { max-width:950px; margin:auto; padding:16px; }
+    .hero {
+      padding:30px 20px; border-radius:18px; margin:12px 0 22px;
+      background:linear-gradient(135deg,#39205c,#151c3b);
+      border:1px solid #49376b;
+    }
+    .hero h1 { font-size:30px; margin:0 0 10px; }
+    .hero p,.muted { color:var(--muted); line-height:1.6; }
+    .section-title { margin:28px 0 14px; }
+    .grid {
+      display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+    }
+    .card {
+      padding:16px; border-radius:14px; background:var(--card);
+      border:1px solid var(--line);
+    }
+    .diamond { font-size:30px; }
+    .price { color:var(--accent); font-size:20px; font-weight:bold; }
+    input,select {
+      width:100%; padding:13px; margin:7px 0 13px; border-radius:9px;
+      border:1px solid var(--line); background:#131321; color:white;
+    }
+    label { font-size:14px; color:#ddd; }
+    .full { width:100%; }
+    .hidden { display:none!important; }
+    .row { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .order { padding:13px 0; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+    footer { padding:30px 15px; text-align:center; color:var(--muted); }
+    a { color:var(--accent); }
+    #notice { white-space:pre-wrap; margin:12px 0; font-size:14px; }
+    @media(min-width:650px) {
+      .grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .hero h1 { font-size:38px; }
+    }
+  </style>
 </head>
-
 <body>
 <header>
- <div class="logo">💎 MOHIN TOP UP</div>
- <p>Free Fire Diamond Top-Up</p>
+  <div class="logo">💎 MOHIN TOP UP</div>
+  <button id="loginBtn" onclick="login()">Google Login</button>
+  <button id="logoutBtn" class="secondary hidden" onclick="logout()">Logout</button>
 </header>
 
-<section class="hero">
- <div class="tag">FAST • EASY • WHATSAPP ORDER</div>
- <h1>Free Fire Diamond Top-Up</h1>
- <p>আপনার পছন্দের Diamond প্যাকেজ নির্বাচন করুন।<br>
- অর্ডার WhatsApp-এ পাঠিয়ে দিন।</p>
-</section>
+<main class="wrap">
+  <section class="hero">
+    <p>WELCOME TO MOHIN TOP UP</p>
+    <h1>Free Fire Diamond Top Up</h1>
+    <p>সহজে অর্ডার করুন। নিজের প্রোফাইল থেকে অর্ডারের অবস্থা দেখুন।</p>
+    <button onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">
+      Buy Diamonds 💎
+    </button>
+  </section>
 
-<main class="container">
+  <div id="notice" role="status" aria-live="polite"></div>
 
-<!-- FREE COINS -->
-<section class="panel" id="freeCoins">
- <h2>🪙 MOHIN FREE COINS</h2>
+  <section id="profile" class="card hidden">
+    <div class="row">
+      <div>
+        <h3>👤 My Profile</h3>
+        <div id="userName"></div>
+        <div id="userEmail" class="muted"></div>
+      </div>
+      <div class="diamond">👑</div>
+    </div>
+    <hr style="border-color:#343449">
+    <p>মোট অর্ডার: <b id="totalOrders">0</b></p>
+    <p>সম্পন্ন অর্ডার: <b id="completedOrders">0</b></p>
+    <p>মোট কেনা ডায়মন্ড: <b id="totalDiamonds">0</b></p>
+  </section>
 
- <div class="coins">
-  <p style="text-align:center;color:#d7ddf8">
-   বিজ্ঞাপন দেখে কয়েন জমাও!
-  </p>
+  <h2 class="section-title" id="packages">💎 Diamond Packages</h2>
+  <p class="muted">দামগুলো নমুনা। নিজের আসল দাম বসিয়ে নেবে।</p>
 
-  <div class="balance">🪙 <span id="coinBalance">0</span></div>
+  <div class="grid" id="packageGrid"></div>
 
-  <div class="stats">
-   <div class="stat">
-    আজকের বিজ্ঞাপন
-    <strong><span id="adCount">0</span>/10</strong>
-   </div>
-   <div class="stat">
-    রিডিম করতে লাগবে
-    <strong>1000 🪙</strong>
-   </div>
-  </div>
+  <section class="card" id="orderForm" style="margin-top:22px">
+    <h2>🛒 Place Your Order</h2>
+    <p class="muted">অর্ডার করতে আগে Google Login করো।</p>
 
-  <button class="btn" id="watchAd">
-   ▶ বিজ্ঞাপন দেখে ১ কয়েন নিন
-  </button>
+    <form id="purchaseForm">
+      <label for="playerId">Free Fire Player UID</label>
+      <input id="playerId" inputmode="numeric" maxlength="30"
+             placeholder="তোমার Player UID" required>
 
-  <p class="note" id="adMessage" style="text-align:center">
-   প্রতিদিন সর্বোচ্চ ১০টি বিজ্ঞাপন। ডেমো মোড।
-  </p>
+      <label for="server">Server / Region</label>
+      <select id="server" required>
+        <option value="BD">Bangladesh</option>
+        <option value="Other">Other</option>
+      </select>
 
-  <div class="warning">
-   ⚠️ এটি ডেমো। এই বাটন প্রকৃত বিজ্ঞাপন দেখায় না।
-   প্রকৃত বিজ্ঞাপন থেকে কয়েন দিতে Rewarded Ads নেটওয়ার্ক
-   ও সার্ভার যাচাই যুক্ত করতে হবে। ডেমোর কয়েন দিয়ে
-   বাস্তবে ডায়মন্ড পাওয়া যাবে না। ফ্রী ফায়ার ডায়মন্ড পাওয়া যাবে। 
-  </div>
+      <label for="package">Diamond Package</label>
+      <select id="package" required></select>
 
-  <hr style="border-color:#354565;margin:20px 0">
+      <label for="payment">Payment Method</label>
+      <select id="payment" required>
+        <option value="bKash">bKash - Manual</option>
+        <option value="Nagad">Nagad - Manual</option>
+        <option value="Other">Other - Contact Admin</option>
+      </select>
 
-  <h3 style="color:#ffe34d">💎 Diamond রিডিম আবেদন</h3>
-  <label class="field" for="redeemUid">Free Fire Player UID</label>
-  <input id="redeemUid" type="text" inputmode="numeric"
-   placeholder="Player UID লিখুন">
+      <label for="trx">Transaction ID (পেমেন্ট করে থাকলে)</label>
+      <input id="trx" maxlength="100" placeholder="ঐচ্ছিক">
 
-  <button class="btn" id="redeemBtn">
-   1000 কয়েনে রিডিম আবেদন
-  </button>
-  <p class="note" id="redeemMessage">
-   ১০০০ কয়েন হলে আবেদন করার অপশন ব্যবহার করুন।
-  </p>
- </div>
-</section>
+      <button class="full" id="submitOrder" type="submit">
+        Confirm Order
+      </button>
+    </form>
+  </section>
 
-<!-- DIAMOND PACKAGES -->
-<section class="panel">
- <h2>💎 Diamond প্যাকেজ</h2>
- <div class="packages">
-  <label class="package">
-   <input type="radio" name="pack" value="100 Diamonds" data-price="75" checked>
-   <span class="diamonds">💎 100 Diamonds</span>
-   <span class="price">৳75</span>
-  </label>
-  <label class="package">
-   <input type="radio" name="pack" value="310 Diamonds" data-price="225">
-   <span class="diamonds">💎 310 Diamonds</span>
-   <span class="price">৳225</span>
-  </label>
-  <label class="package">
-   <input type="radio" name="pack" value="520 Diamonds" data-price="375">
-   <span class="diamonds">💎 520 Diamonds</span>
-   <span class="price">৳375</span>
-  </label>
-  <label class="package">
-   <input type="radio" name="pack" value="1060 Diamonds" data-price="745">
-   <span class="diamonds">💎 1060 Diamonds</span>
-   <span class="price">৳745</span>
-  </label>
-  <label class="package">
-   <input type="radio" name="pack" value="2180 Diamonds" data-price="1445">
-   <span class="diamonds">💎 2180 Diamonds</span>
-   <span class="price">৳1445</span>
-  </label>
-  <label class="package">
-   <input type="radio" name="pack" value="5600 Diamonds" data-price="3595">
-   <span class="diamonds">💎 5600 Diamonds</span>
-   <span class="price">৳3595</span>
-  </label>
- </div>
- <p class="note">প্রকাশের আগে প্যাকেজের দাম যাচাই করে নিন।</p>
-</section>
+  <section id="dashboard" class="card hidden" style="margin-top:22px">
+    <h2>📋 My Order History</h2>
+    <div id="ordersList" class="muted">অর্ডার লোড হচ্ছে...</div>
+  </section>
 
-<!-- WHATSAPP ORDER -->
-<section class="panel">
- <h2>📝 অর্ডার ফর্ম</h2>
- <form id="orderForm">
-  <label class="field" for="uid">Free Fire Player UID *</label>
-  <input id="uid" type="text" inputmode="numeric"
-   placeholder="আপনার Player UID লিখুন" required>
-
-  <label class="field" for="customer">আপনার নাম *</label>
-  <input id="customer" type="text"
-   placeholder="আপনার নাম লিখুন" required>
-
-  <label class="field" for="phone">যোগাযোগের নম্বর</label>
-  <input id="phone" type="tel" placeholder="01XXXXXXXXX">
-
-  <button class="btn" type="submit">🟢 WhatsApp-এ অর্ডার করুন</button>
- </form>
- <p class="note">
-  কখনো Free Fire পাসওয়ার্ড বা OTP দেবেন না।
- </p>
-</section>
-
-<section class="panel">
- <h2>⭐ কেন MOHIN TOP UP?</h2>
- <div class="features">
-  <div class="feature">💎<br>Diamond প্যাকেজ</div>
-  <div class="feature">🪙<br>Free Coins ডেমো</div>
-  <div class="feature">🛡️<br>তথ্যের নিরাপত্তা</div>
- </div>
-</section>
+  <section class="card" style="margin-top:22px">
+    <h2>📞 Help & Support</h2>
+    <p>অর্ডার বা পেমেন্টের সমস্যায় আমাদের সঙ্গে যোগাযোগ করুন।</p>
+    <!-- নিচে নিজের WhatsApp নম্বর বসাও -->
+    <a id="whatsappLink" href="https://wa.me/8801819214474"
+       target="_blank" rel="noopener noreferrer">
+      <button type="button">Contact on WhatsApp</button>
+    </a>
+  </section>
 </main>
 
-<footer>
- © 2026 MOHIN TOP UP<br>
- Free Fire Top-Up Website
-</footer>
+<footer>© 2026 MOHIN TOP UP | Fan-made top-up website</footer>
 
-<script>
-/* নিজের WhatsApp নম্বর বসান:
-   বাংলাদেশের নম্বরের শুরুতে 880 দিন, + চিহ্ন নয়।
-*/
-const WHATSAPP_NUMBER = "8801XXXXXXXXX";
+<script type="module">
+  import { initializeApp } from
+    "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
 
-/* DEMO ONLY: এই তথ্য একই ব্রাউজারের localStorage-এ থাকে।
-   এটি নিরাপদ সার্ভার-ভিত্তিক ব্যালেন্স নয়।
-*/
-const STORAGE_KEY = "mohinCoinsDemoV1";
+  import {
+    getAuth, GoogleAuthProvider, signInWithPopup,
+    signInWithRedirect, getRedirectResult, onAuthStateChanged, signOut
+  } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 
-function todayKey(){
- const d = new Date();
- return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
-}
+  import {
+    getFirestore, doc, getDoc, setDoc, addDoc,
+    collection, query, where, getDocs, serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
-function loadState(){
- try {
-  const s = JSON.parse(localStorage.getItem(STORAGE_KEY));
-  if(s && typeof s.coins === "number"){
-   if(s.day !== todayKey()){
-    s.day = todayKey();
-    s.ads = 0;
-   }
-   return s;
+  // Firebase Console > Project settings > Your apps
+  // নিজের Firebase Web Config এখানে বসাও।
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+
+  // নিজের আসল প্যাকেজ ও দাম বসাও।
+  const packages = [
+    { id:"p1", name:"25 Diamonds", diamonds:25, price:25 },
+    { id:"p2", name:"50 Diamonds", diamonds:50, price:40 },
+    { id:"p3", name:"115 Diamonds", diamonds:115, price:80 },
+    { id:"p4", name:"240 Diamonds", diamonds:240, price:160 },
+    { id:"p5", name:"610 Diamonds", diamonds:610, price:390 },
+    { id:"p6", name:"1240 Diamonds", diamonds:1240, price:780 }
+  ];
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const provider = new GoogleAuthProvider();
+  provider.setCustomParameters({ prompt:"select_account" });
+
+  let currentUser = null;
+  let busy = false;
+
+  const $ = id => document.getElementById(id);
+  const money = n => "৳" + Number(n).toLocaleString("en-BD");
+
+  function notify(message, error=false) {
+    $("notice").textContent = message;
+    $("notice").style.color = error ? "#ff8585" : "#8ff0b0";
   }
- } catch(e){}
- return {coins:0, ads:0, day:todayKey()};
-}
 
-let state = loadState();
+  function safeText(value) {
+    return String(value ?? "").replace(/[&<>"']/g, c => ({
+      "&":"&amp;", "<":"&lt;", ">":"&gt;",
+      '"':"&quot;", "'":"&#39;"
+    })[c]);
+  }
 
-function saveState(){
- localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-}
+  function renderPackages() {
+    $("packageGrid").innerHTML = packages.map(p => `
+      <article class="card">
+        <div class="diamond">💎</div>
+        <h3>${safeText(p.name)}</h3>
+        <p class="price">${money(p.price)}</p>
+        <button class="full" data-package="${safeText(p.id)}">
+          Select Package
+        </button>
+      </article>`).join("");
 
-function render(){
- document.getElementById("coinBalance").textContent = state.coins;
- document.getElementById("adCount").textContent = state.ads;
+    $("package").innerHTML = packages.map(p =>
+      `<option value="${safeText(p.id)}">${safeText(p.name)} — ${money(p.price)}</option>`
+    ).join("");
 
- const watch = document.getElementById("watchAd👈");
- watch.disabled = state.ads >= 10;
+    $("packageGrid").addEventListener("click", event => {
+      const button = event.target.closest("[data-package]");
+      if (button) {
+        $("package").value = button.dataset.package;
+        $("orderForm").scrollIntoView({behavior:"smooth"});
+      }
+    });
+  }
 
- watch.textContent = state.ads >= 10
-  ? "আজকের সীমা শেষ"
-  : "▶ ডেমো: ১ কয়েন যোগ করুন";
+  window.login = async function() {
+    try {
+      notify("Google Login চালু হচ্ছে...");
+      try {
+        await signInWithPopup(auth, provider);
+      } catch (error) {
+        if (["popup-blocked", "popup-closed-by-user",
+             "operation-not-supported-in-this-environment"].includes(error.code)) {
+          await signInWithRedirect(auth, provider);
+          return;
+        }
+        throw error;
+      }
+    } catch (error) {
+      notify("Login ব্যর্থ: " + error.message, true);
+    }
+  };
 
- document.getElementById("adMessage").textContent =
-  state.ads >= 10
-   ? "আজ ১০টি ডেমো বিজ্ঞাপন শেষ। আগামীকাল আবার চেষ্টা করুন।"
-   : "ডেমোতে বাটন চাপলে ১ কয়েন যোগ হবে। এটি প্রকৃত বিজ্ঞাপন নয়।";
+  window.logout = async function() {
+    try {
+      await signOut(auth);
+      notify("Logout হয়েছে।");
+    } catch (error) {
+      notify("Logout ব্যর্থ: " + error.message, true);
+    }
+  };
 
- document.getElementById("redeemBtn").disabled = state.coins < 1000;
+  async function loadDashboard(user) {
+    $("ordersList").textContent = "অর্ডার লোড হচ্ছে...";
+    try {
+      // নিরাপদ নিয়ম: কেবল নিজের UID-এর অর্ডার পড়া।
+      const q = query(
+        collection(db, "orders"),
+        where("uid", "==", user.uid)
+      );
+      const snapshot = await getDocs(q);
+      let totalDiamonds = 0;
+      let completed = 0;
+      const rows = [];
 
- document.getElementById("redeemMessage").textContent =
-  state.coins >= 1000
-   ? "আপনি রিডিম আবেদনের জন্য ডেমো শর্ত পূরণ করেছেন।"
-   : "আরও " + (1000-state.coins) + " কয়েন জমাতে হবে।";
-}
+      snapshot.forEach(item => {
+        const o = item.data();
+        if (o.status === "completed") {
+          completed++;
+          totalDiamonds += Number(o.diamonds) || 0;
+        }
 
-document.getElementById("watchAd").addEventListener("click", function(){
- if(state.ads >= 10){
-  alert("আজকের ১০টি ডেমো বিজ্ঞাপনের সীমা শেষ!");
-  return;
- }
+        rows.push(`
+          <div class="order">
+            <b>${safeText(o.packageName || "Diamond Order")}</b>
+            <p>UID: ${safeText(o.playerId)}</p>
+            <p>মূল্য: ${money(o.price || 0)}</p>
+            <p>পেমেন্ট: ${safeText(o.paymentMethod || "-")}</p>
+            <p>স্ট্যাটাস: ${safeText(o.status || "pending")}</p>
+            <small>Order ID: ${safeText(item.id)}</small>
+          </div>`);
+      });
 
- state.ads++;
- state.coins++;
- saveState();
- render();
+      $("totalOrders").textContent = snapshot.size;
+      $("completedOrders").textContent = completed;
+      $("totalDiamonds").textContent = totalDiamonds;
+      $("ordersList").innerHTML =
+        rows.reverse().join("") || "এখনো কোনো অর্ডার নেই।";
+    } catch (error) {
+      $("ordersList").textContent =
+        "অর্ডার লোড হয়নি। Firestore Rules ও Firebase সংযোগ পরীক্ষা করো।";
+      console.error(error);
+    }
+  }
 
- alert("ডেমো: ১ কয়েন যোগ হয়েছে। প্রকৃত বিজ্ঞাপন দেখা হয়নি।");
-});
+  $("purchaseForm").addEventListener("submit", async event => {
+    event.preventDefault();
+    if (busy) return;
 
-document.getElementById("redeemBtn").addEventListener("click", function(){
- const uid = document.getElementById("redeemUid").value.trim();
+    if (!currentUser) {
+      notify("প্রথমে Google Login করো।", true);
+      return;
+    }
 
- if(state.coins < 1000){
-  alert("রিডিমের জন্য ১০০০ কয়েন লাগবে।");
-  return;
- }
- if(!uid){
-  alert("আপনার Player UID লিখুন।");
-  return;
- }
- if(WHATSAPP_NUMBER === "8801819214474"){
-  alert("আগে কোডে নিজের WhatsApp নম্বর বসান।");
-  return;
- }
+    const playerId = $("playerId").value.trim();
+    const selected = packages.find(p => p.id === $("package").value);
+    const trx = $("trx").value.trim();
 
- const msg =
-  "MOHIN TOP UP - ডেমো রিডিম আবেদন\n"+
-  "Player UID: "+uid+"\n"+
-  "কয়েন: "+state.coins+"\n"+
-  "নোট: এটি ডেমো আবেদন; ডায়মন্ড নিশ্চিত নয়।";
+    if (!/^\d{5,30}$/.test(playerId)) {
+      notify("সঠিক Free Fire UID দাও (৫–৩০টি সংখ্যা)।", true);
+      return;
+    }
+    if (!selected) {
+      notify("একটি প্যাকেজ নির্বাচন করো।", true);
+      return;
+    }
 
- window.open(
-  "https://wa.me/"+WHATSAPP_NUMBER+
-  "?text="+encodeURIComponent(msg),
-  "_blank"
- );
-});
+    busy = true;
+    $("submitOrder").disabled = true;
 
-document.getElementById("orderForm").addEventListener("submit", function(e){
- e.preventDefault();
+    try {
+      // দাম/ডায়মন্ডের তথ্য এখানে UI থেকে নয়, কনফিগার করা
+      // প্যাকেজ তালিকা থেকে নেওয়া হচ্ছে। Production-এ সার্ভার যাচাই চাই।
+      const order = {
+        uid: currentUser.uid,
+        playerId,
+        server: $("server").value,
+        packageId: selected.id,
+        packageName: selected.name,
+        diamonds: selected.diamonds,
+        price: selected.price,
+        paymentMethod: $("payment").value,
+        transactionId: trx,
+        status: "pending",
+        createdAt: serverTimestamp()
+      };
 
- const uid = document.getElementById("uid").value.trim();
- const customer = document.getElementById("customer").value.trim();
- const phone = document.getElementById("phone").value.trim();
- const selected = document.querySelector('input[name="pack"]:checked');
+      const result = await addDoc(collection(db, "orders"), order);
+      notify("অর্ডার জমা হয়েছে!\nOrder ID: " + result.id +
+        "\nঅ্যাডমিন পেমেন্ট যাচাই করার পর অর্ডার সম্পন্ন হবে।");
+      $("trx").value = "";
+      await loadDashboard(currentUser);
+    } catch (error) {
+      console.error(error);
+      notify("অর্ডার জমা হয়নি। Firestore Rules ও সংযোগ পরীক্ষা করো।", true);
+    } finally {
+      busy = false;
+      $("submitOrder").disabled = false;
+    }
+  });
 
- if(!selected || !uid || !customer){
-  alert("প্রয়োজনীয় তথ্য পূরণ করুন।");
-  return;
- }
- if(WHATSAPP_NUMBER === "8801819214474"){
-  alert("আগে কোডে নিজের WhatsApp নম্বর বসান।");
-  return;
- }
+  onAuthStateChanged(auth, async user => {
+    currentUser = user;
 
- const msg =
-  "MOHIN TOP UP - নতুন অর্ডার\n"+
-  "নাম: "+customer+"\n"+
-  "Player UID: "+uid+"\n"+
-  "প্যাকেজ: "+selected.value+"\n"+
-  "মূল্য: ৳"+selected.dataset.price+"\n"+
-  "যোগাযোগ: "+(phone || "দেওয়া হয়নি");
+    $("loginBtn").classList.toggle("hidden", !!user);
+    $("logoutBtn").classList.toggle("hidden", !user);
+    $("profile").classList.toggle("hidden", !user);
+    $("dashboard").classList.toggle("hidden", !user);
 
- window.open(
-  "https://wa.me/"+WHATSAPP_NUMBER+
-  "?text="+encodeURIComponent(msg),
-  "_blank"
- );
-});
+    if (!user) return;
 
-render();
+    $("userName").textContent = user.displayName || "User";
+    $("userEmail").textContent = user.email || "";
+
+    try {
+      await setDoc(doc(db, "users", user.uid), {
+        uid: user.uid,
+        displayName: user.displayName || "",
+        email: user.email || "",
+        photoURL: user.photoURL || "",
+        lastLoginAt: serverTimestamp()
+      }, { merge:true });
+
+      await loadDashboard(user);
+      notify("Google Login সফল হয়েছে!");
+    } catch (error) {
+      console.error(error);
+      notify("প্রোফাইল বা Dashboard লোডে সমস্যা। Rules পরীক্ষা করো।", true);
+    }
+  });
+
+  renderPackages();
+
+  try {
+    await getRedirectResult(auth);
+  } catch (error) {
+    notify("Google Login সমস্যা: " + error.message, true);
+  }
 </script>
 </body>
 </html>
