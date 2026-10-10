@@ -1,270 +1,160 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MOHIN TOPUP ZONE | Free Fire Top-up</title>
-  <meta name="description" content="Free Fire diamond top-up order website">
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0d14;
-      color: #fff;
-    }
-
-    header {
-      background: #151925;
-      padding: 18px 12px;
-      text-align: center;
-      border-bottom: 2px solid #ff8a00;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #ff9d22;
-      font-size: 26px;
-    }
-
-    header p {
-      margin: 8px 0 0;
-      color: #c8cbd5;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 30px 15px;
-      background: linear-gradient(140deg, #202943, #10121c);
-    }
-
-    .hero h2 { font-size: 25px; margin: 0 0 10px; }
-    .hero p { color: #d4d7e0; line-height: 1.6; }
-
-    .container {
-      max-width: 520px;
-      margin: 22px auto;
-      padding: 20px;
-    }
-
-    .panel {
-      background: #171b28;
-      border: 1px solid #30374a;
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 18px;
-    }
-
-    h3 {
-      color: #ffab38;
-      margin-top: 0;
-    }
-
-    label {
-      display: block;
-      margin: 15px 0 7px;
-      font-weight: bold;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #41485c;
-      border-radius: 8px;
-      background: #0d111b;
-      color: white;
-      font-size: 16px;
-    }
-
-    .package {
-      display: block;
-      padding: 13px;
-      margin: 10px 0;
-      background: #22283a;
-      border: 1px solid #343d54;
-      border-radius: 9px;
-      cursor: pointer;
-    }
-
-    .package input {
-      width: auto;
-      margin-right: 8px;
-    }
-
-    .package:has(input:checked) {
-      border-color: #ff9d22;
-      background: #342719;
-    }
-
-    button {
-      width: 100%;
-      padding: 15px;
-      border: 0;
-      border-radius: 9px;
-      background: #16a765;
-      color: white;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 18px;
-    }
-
-    button:hover { background: #118653; }
-
-    .note {
-      font-size: 13px;
-      line-height: 1.6;
-      color: #b9c0d0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 22px 12px;
-      color: #aeb4c3;
-      font-size: 13px;
-    }
-
-    a { color: #ffb34d; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d20">
+<title>MOHIN TOP UP | Free Fire Diamonds</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080d19;color:#fff;font-family:Arial,"Noto Sans Bengali",sans-serif}
+header{padding:20px 14px;text-align:center;background:#111a36;border-bottom:2px solid #514dff}
+.logo{font-size:27px;font-weight:900;color:#ffe34d}
+header p{margin:8px 0 0;color:#cbd5ff}
+.hero{padding:35px 18px;text-align:center;background:radial-gradient(circle at top,#293d91,#10152c 70%)}
+.hero h1{font-size:29px;margin:0 0 12px}
+.hero p{color:#d7ddf8;line-height:1.8}
+.tag{display:inline-block;background:#ffe34d;color:#111;padding:9px 15px;border-radius:20px;font-weight:bold}
+.container{max-width:700px;margin:auto;padding:16px}
+.panel{background:#151c31;border:1px solid #343e60;border-radius:18px;padding:18px;margin:16px 0}
+h2{font-size:21px;color:#ffe34d;margin:0 0 18px}
+.packages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.package{display:block;border:1px solid #414b72;border-radius:12px;padding:15px 8px;text-align:center;cursor:pointer;background:#202943}
+.package input{accent-color:#ffe34d}
+.package:has(input:checked){border:2px solid #ffe34d;background:#302a2c}
+.diamonds{display:block;font-size:18px;font-weight:bold;margin:8px 0}
+.price{color:#ffe34d;font-weight:bold;font-size:19px}
+label.field{display:block;margin:15px 0 7px;color:#e5e9ff;font-weight:bold}
+input[type="text"],input[type="tel"]{width:100%;padding:14px;border-radius:10px;border:1px solid #4a5473;background:#0c1223;color:white;font-size:16px}
+input:focus{outline:2px solid #6d65ff}
+.btn{display:block;width:100%;padding:15px;border:0;border-radius:12px;background:#12c765;color:#fff;font-size:17px;font-weight:bold;cursor:pointer;margin-top:20px}
+.btn:active{transform:scale(.99)}
+.note{font-size:13px;color:#b7c1df;line-height:1.7}
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;text-align:center}
+.feature{background:#202943;padding:13px 5px;border-radius:10px;font-size:13px;line-height:1.7}
+footer{text-align:center;color:#9da9cb;padding:25px 10px;font-size:13px}
+a{color:#ffe34d}
+@media(max-width:360px){.packages{grid-template-columns:1fr}.hero h1{font-size:24px}.logo{font-size:23px}}
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>💎 MOHIN TOP UP</h1>
-    <p>Free Fire Diamond Top-up</p>
-  </header>
+<header>
+  <div class="logo">💎 MOHIN TOP UP</div>
+  <p>Free Fire Diamond Top-Up</p>
+</header>
 
-  <section class="hero">
-    <h2>Diamond Top-up Order</h2>
-    <p>আপনার Player UID ও প্যাকেজ নির্বাচন করুন।<br>
-    অর্ডার WhatsApp-এ পাঠিয়ে দিন।</p>
+<section class="hero">
+  <div class="tag">FAST • EASY • WHATSAPP ORDER</div>
+  <h1>Free Fire Diamond Top-Up</h1>
+  <p>আপনার পছন্দের Diamond প্যাকেজ নির্বাচন করুন।<br>অর্ডার WhatsApp-এ পাঠিয়ে দিন।</p>
+</section>
+
+<main class="container">
+  <section class="panel">
+    <h2>💎 Diamond প্যাকেজ</h2>
+    <div class="packages">
+      <label class="package">
+        <input type="radio" name="pack" value="100 Diamonds" data-price="75" checked>
+        <span class="diamonds">💎 100 Diamonds</span>
+        <span class="price">৳75</span>
+      </label>
+      <label class="package">
+        <input type="radio" name="pack" value="310 Diamonds" data-price="225">
+        <span class="diamonds">💎 310 Diamonds</span>
+        <span class="price">৳225</span>
+      </label>
+      <label class="package">
+        <input type="radio" name="pack" value="520 Diamonds" data-price="375">
+        <span class="diamonds">💎 520 Diamonds</span>
+        <span class="price">৳375</span>
+      </label>
+      <label class="package">
+        <input type="radio" name="pack" value="1060 Diamonds" data-price="745">
+        <span class="diamonds">💎 1060 Diamonds</span>
+        <span class="price">৳745</span>
+      </label>
+      <label class="package">
+        <input type="radio" name="pack" value="2180 Diamonds" data-price="1445">
+        <span class="diamonds">💎 2180 Diamonds</span>
+        <span class="price">৳1445</span>
+      </label>
+      <label class="package">
+        <input type="radio" name="pack" value="5600 Diamonds" data-price="3595">
+        <span class="diamonds">💎 5600 Diamonds</span>
+        <span class="price">৳3595</span>
+      </label>
+    </div>
+    <p class="note">দামগুলো নমুনা। প্রকাশের আগে নিজের প্রকৃত দাম বসান।</p>
   </section>
 
-  <main class="container">
-    <section class="panel">
-      <h3>💎 Diamond প্যাকেজ</h3>
+  <section class="panel">
+    <h2>📝 অর্ডার ফর্ম</h2>
+    <form id="orderForm">
+      <label class="field" for="uid">Free Fire Player UID *</label>
+      <input id="uid" type="text" inputmode="numeric" placeholder="আপনার Player UID লিখুন" required>
 
-      <label class="package">
-        <input type="radio" name="pack"
-          value="100 Diamonds" data-price="75" checked>
-        100 Diamonds — ৳75
-      </label>
+      <label class="field" for="customer">আপনার নাম *</label>
+      <input id="customer" type="text" placeholder="আপনার নাম লিখুন" required>
 
-      <label class="package">
-        <input type="radio" name="pack"
-          value="310 Diamonds" data-price="225">
-        310 Diamonds — ৳225
-      </label>
+      <label class="field" for="phone">আপনার যোগাযোগের নম্বর</label>
+      <input id="phone" type="tel" placeholder="01819214474">
 
-      <label class="package">
-        <input type="radio" name="pack"
-          value="520 Diamonds" data-price="375">
-        520 Diamonds — ৳375
-      </label>
+      <button class="btn" type="submit">🟢 WhatsApp-এ অর্ডার করুন</button>
+    </form>
+    <p class="note">অর্ডারের তথ্য WhatsApp-এ পাঠানোর আগে আপনি নিজে দেখে নিতে পারবেন। কখনো Free Fire পাসওয়ার্ড বা OTP দেবেন না।</p>
+  </section>
 
-      <label class="package">
-        <input type="radio" name="pack"
-          value="1060 Diamonds" data-price="754">
-        1060 Diamonds — ৳745
-      </label>
+  <section class="panel">
+    <h2>⭐ কেন MOHIN TOP UP?</h2>
+    <div class="features">
+      <div class="feature">💎<br>Diamond প্যাকেজ</div>
+      <div class="feature">🟢<br>WhatsApp অর্ডার</div>
+      <div class="feature">🛡️<br>নিরাপদ তথ্য</div>
+    </div>
+  </section>
+</main>
 
-      <p class="note">
-        এগুলো শুধু নমুনা মূল্য। প্রকাশের আগে নিজের
-        প্রকৃত মূল্য দিয়ে পরিবর্তন করুন।
-      </p>
-    </section>
+<footer>
+  © 2026 MOHIN TOP UP<br>
+  Free Fire Top-Up Order Website
+</footer>
 
-    <section class="panel">
-      <h3>📝 অর্ডার ফর্ম</h3>
+<script>
+const WHATSAPP_NUMBER = "8801819214474";
 
-      <form id="orderForm">
-        <label for="playerUID">Free Fire Player UID</label>
-        <input id="playerUID" type="text"
-          inputmode="numeric" maxlength="25"
-          placeholder="আপনার Player UID লিখুন"
-          required>
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-        <label for="playerName">আপনার নাম</label>
-        <input id="playerName" type="text"
-          maxlength="60" placeholder="নাম লিখুন" required>
+  const uid = document.getElementById("uid").value.trim();
+  const customer = document.getElementById("customer").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const selected = document.querySelector('input[name="pack"]:checked');
 
-        <label for="contact">যোগাযোগের নম্বর</label>
-        <input id="contact" type="tel"
-          maxlength="20" placeholder="01810214474" required>
+  if (!selected || !uid || !customer) {
+    alert("অনুগ্রহ করে প্রয়োজনীয় তথ্য পূরণ করুন।");
+    return;
+  }
 
-        <button type="submit">
-          📲 WhatsApp-এ অর্ডার করুন
-        </button>
-      </form>
-    </section>
+  if (WHATSAPP_NUMBER === "8801819214474") {
+    alert("প্রথমে কোডে নিজের WhatsApp নম্বর বসান।");
+    return;
+  }
 
-    <section class="panel">
-      <h3>ℹ️ গুরুত্বপূর্ণ তথ্য</h3>
-      <p class="note">
-        অর্ডার পাঠানোর পর WhatsApp-এ তথ্য যাচাই করে
-        অর্ডার নিশ্চিত করা হবে। পেমেন্টের আগে মূল্য,
-        ডেলিভারি এবং সরবরাহকারীর বৈধতা যাচাই করুন।
-        এই ওয়েবসাইটটি একটি স্বাধীন অর্ডার পেজ;
-        এটি Garena-র অফিসিয়াল ওয়েবসাইট। 
-      </p>
-    </section>
-  </main>
+  const message =
+    "MOHIN TOP UP - নতুন অর্ডার%0A" +
+    "নাম: " + encodeURIComponent(customer) + "%0A" +
+    "Player UID: " + encodeURIComponent(uid) + "%0A" +
+    "প্যাকেজ: " + encodeURIComponent(selected.value) + "%0A" +
+    "মূল্য: ৳" + selected.dataset.price + "%0A" +
+    "যোগাযোগ: " + encodeURIComponent(phone || "দেওয়া হয়নি");
 
-  <footer>
-    © 2026 MOHIN TOPUP ZONE | Independent fan-made store
-  </footer>
+  const url = "https://wa.me/" + WHATSAPP_NUMBER +
+              "?text=" + message;
 
-  <script>
-    // এখানে নিজের WhatsApp নম্বর বসাও।
-    // বাংলাদেশের নম্বর হলে 880 দিয়ে শুরু করবে,
-    // শুরুর 0 বাদ দেবে। যেমন: 8801XXXXXXXXX
-    const WHATSAPP_NUMBER = "8801819214474";
-
-    const form = document.getElementById("orderForm");
-
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const uid = document.getElementById("playerUID")
-        .value.trim();
-      const name = document.getElementById("playerName")
-        .value.trim();
-      const contact = document.getElementById("contact")
-        .value.trim();
-
-      const selected = document.querySelector(
-        'input[name="pack"]:checked'
-      );
-
-      if (!uid || !name || !contact || !selected) {
-        alert("সব তথ্য পূরণ করুন।");
-        return;
-      }
-
-      if (WHATSAPP_NUMBER === "8801819214474") {
-        alert("প্রথমে কোডে নিজের WhatsApp নম্বর বসান।");
-        return;
-      }
-
-      const price = selected.dataset.price;
-
-      const message =
-        "💎 MOHIN TOPUP - NEW ORDER\n\n" +
-        "Player UID: " + uid + "\n" +
-        "Customer Name: " + name + "\n" +
-        "Contact: " + contact + "\n" +
-        "Package: " + selected.value + "\n" +
-        "Listed Price: ৳" + price + "\n\n" +
-        "দয়া করে অর্ডারটি যাচাই করুন।";
-
-      const url = "https://wa.me/" +
-        WHATSAPP_NUMBER + "?text=" +
-        encodeURIComponent(message);
-
-      window.open(url, "_blank", "noopener");
-    });
-  </script>
+  window.open(url, "_blank");
+});
+</script>
 
 </body>
 </html>
