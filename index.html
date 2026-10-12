@@ -1,83 +1,202 @@
-TOP-UP-ZONE
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#10101b">
-  <title>MOHIN TOP UP | Free Fire Diamonds</title>
-  <style>
-    :root {
-      --bg:#10101b; --card:#1c1c2c; --accent:#ffb703;
-      --text:#fff; --muted:#b8b8cc; --line:#343449;
-    }
-    * { box-sizing:border-box; }
-    body {
-      margin:0; font-family:Arial,sans-serif; background:var(--bg);
-      color:var(--text);
-    }
-    header {
-      display:flex; align-items:center; justify-content:space-between;
-      padding:15px; background:#181827; border-bottom:1px solid var(--line);
-      position:sticky; top:0; z-index:5;
-    }
-    .logo { font-weight:900; color:var(--accent); font-size:19px; }
-    button {
-      border:0; border-radius:10px; padding:12px 15px;
-      background:var(--accent); color:#171717; font-weight:bold;
-      cursor:pointer;
-    }
-    button:disabled { opacity:.5; }
-    .secondary { background:#343449; color:white; }
-    .wrap { max-width:950px; margin:auto; padding:16px; }
-    .hero {
-      padding:30px 20px; border-radius:18px; margin:12px 0 22px;
-      background:linear-gradient(135deg,#39205c,#151c3b);
-      border:1px solid #49376b;
-    }
-    .hero h1 { font-size:30px; margin:0 0 10px; }
-    .hero p,.muted { color:var(--muted); line-height:1.6; }
-    .section-title { margin:28px 0 14px; }
-    .grid {
-      display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:12px;
-    }
-    .card {
-      padding:16px; border-radius:14px; background:var(--card);
-      border:1px solid var(--line);
-    }
-    .diamond { font-size:30px; }
-    .price { color:var(--accent); font-size:20px; font-weight:bold; }
-    input,select {
-      width:100%; padding:13px; margin:7px 0 13px; border-radius:9px;
-      border:1px solid var(--line); background:#131321; color:white;
-    }
-    label { font-size:14px; color:#ddd; }
-    .full { width:100%; }
-    .hidden { display:none!important; }
-    .row { display:flex; justify-content:space-between; gap:10px; align-items:center; }
-    .order { padding:13px 0; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
-    footer { padding:30px 15px; text-align:center; color:var(--muted); }
-    a { color:var(--accent); }
-    #notice { white-space:pre-wrap; margin:12px 0; font-size:14px; }
-    @media(min-width:650px) {
-      .grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
-      .hero h1 { font-size:38px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10101b">
+<title>MOHIN TOP UP | Lucky Draw</title>
+
+<style>
+:root {
+  --bg:#10101b;
+  --card:#1c1c2c;
+  --accent:#ffb703;
+  --text:#fff;
+  --muted:#b8b8cc;
+  --line:#343449;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  padding:15px;
+  background:#181827;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:5;
+}
+.logo { color:var(--accent); font-weight:900; }
+button {
+  border:0;
+  border-radius:10px;
+  padding:12px 15px;
+  background:var(--accent);
+  color:#171717;
+  font-weight:bold;
+  cursor:pointer;
+}
+button:disabled { opacity:.5; }
+.secondary { background:#343449;color:white; }
+.wrap { max-width:950px;margin:auto;padding:16px; }
+.hero {
+  padding:28px 20px;
+  border-radius:18px;
+  margin:12px 0 22px;
+  background:linear-gradient(135deg,#39205c,#151c3b);
+  border:1px solid #49376b;
+}
+.hero h1 { font-size:30px;margin:0 0 10px; }
+.muted { color:var(--muted);line-height:1.6; }
+.card {
+  padding:16px;
+  border-radius:14px;
+  background:var(--card);
+  border:1px solid var(--line);
+  margin-bottom:18px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.price { color:var(--accent);font-size:20px;font-weight:bold; }
+input,select {
+  width:100%;
+  padding:13px;
+  margin:7px 0 13px;
+  border-radius:9px;
+  border:1px solid var(--line);
+  background:#131321;
+  color:white;
+}
+label { font-size:14px;color:#ddd; }
+.full { width:100%; }
+.hidden { display:none!important; }
+.row {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:center;
+}
+.order {
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+  overflow-wrap:anywhere;
+}
+#notice {
+  white-space:pre-wrap;
+  margin:12px 0;
+  font-size:14px;
+}
+a { color:var(--accent); }
+footer { padding:30px 15px;text-align:center;color:var(--muted); }
+
+/* Lucky Draw */
+.lucky {
+  text-align:center;
+  background:linear-gradient(160deg,#201640,#121c35);
+}
+.wheel-wrap {
+  position:relative;
+  width:min(82vw,340px);
+  aspect-ratio:1;
+  margin:24px auto;
+}
+.pointer {
+  position:absolute;
+  top:-9px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:2;
+  width:0;height:0;
+  border-left:17px solid transparent;
+  border-right:17px solid transparent;
+  border-top:34px solid #fff;
+  filter:drop-shadow(0 2px 5px #000);
+}
+.wheel {
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  border:7px solid #ffcf40;
+  box-shadow:0 0 25px #854dff88,inset 0 0 12px #000;
+  background:conic-gradient(
+    #ff4757 0deg 51.43deg,
+    #5f27cd 51.43deg 102.86deg,
+    #00a8ff 102.86deg 154.29deg,
+    #10ac84 154.29deg 205.72deg,
+    #ff9f43 205.72deg 257.15deg,
+    #ee5253 257.15deg 308.58deg,
+    #341f97 308.58deg 360deg
+  );
+  position:relative;
+  overflow:hidden;
+  transition:transform 5s cubic-bezier(.12,.72,.12,1);
+}
+.wheel-label {
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:44%;
+  height:24px;
+  margin-top:-12px;
+  transform-origin:0 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:bold;
+  color:#fff;
+  text-shadow:1px 2px 3px #000;
+}
+.wheel-center {
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  width:62px;height:62px;
+  border-radius:50%;
+  border:5px solid #fff;
+  background:#ffb703;
+  color:#191326;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  z-index:1;
+  box-shadow:0 0 12px #000;
+}
+.big { font-size:26px;font-weight:900;color:#ffcf40; }
+.section-title { margin:28px 0 14px; }
+@media(min-width:650px) {
+  .grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .hero h1 { font-size:38px; }
+}
+</style>
 </head>
+
 <body>
 <header>
   <div class="logo">💎 MOHIN TOP UP</div>
   <button id="loginBtn" onclick="login()">Google Login</button>
-  <button id="logoutBtn" class="secondary hidden" onclick="logout()">Logout</button>
+  <button id="logoutBtn" class="secondary hidden"
+          onclick="logout()">Logout</button>
 </header>
 
 <main class="wrap">
   <section class="hero">
     <p>WELCOME TO MOHIN TOP UP</p>
     <h1>Free Fire Diamond Top Up</h1>
-    <p>সহজে অর্ডার করুন। নিজের প্রোফাইল থেকে অর্ডারের অবস্থা দেখুন।</p>
+    <p class="muted">টপ-আপ করুন, Lucky Draw খেলুন এবং আপনার প্রোফাইল দেখুন।</p>
     <button onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">
       Buy Diamonds 💎
     </button>
@@ -86,29 +205,49 @@ TOP-UP-ZONE
   <div id="notice" role="status" aria-live="polite"></div>
 
   <section id="profile" class="card hidden">
-    <div class="row">
-      <div>
-        <h3>👤 My Profile</h3>
-        <div id="userName"></div>
-        <div id="userEmail" class="muted"></div>
-      </div>
-      <div class="diamond">👑</div>
-    </div>
+    <h2>👤 My Profile</h2>
+    <div id="userName"></div>
+    <div id="userEmail" class="muted"></div>
     <hr style="border-color:#343449">
     <p>মোট অর্ডার: <b id="totalOrders">0</b></p>
     <p>সম্পন্ন অর্ডার: <b id="completedOrders">0</b></p>
-    <p>মোট কেনা ডায়মন্ড: <b id="totalDiamonds">0</b></p>
+    <p>মোট কেনা ডায়মন্ড: <b id="totalDiamonds">0</b></p>
+  </section>
+
+  <!-- LUCKY DRAW -->
+  <section class="card lucky">
+    <h2>🎡 MOHIN LUCKY DRAW</h2>
+    <p class="muted">প্রতিদিন একবার ফ্রি স্পিন করুন!</p>
+
+    <div class="wheel-wrap">
+      <div class="pointer"></div>
+      <div id="wheel" class="wheel">
+        <span class="wheel-label" style="transform:rotate(25.7deg) translateX(10px)">10 Coins</span>
+        <span class="wheel-label" style="transform:rotate(77.1deg) translateX(10px)">20 Coins</span>
+        <span class="wheel-label" style="transform:rotate(128.6deg) translateX(10px)">5 💎</span>
+        <span class="wheel-label" style="transform:rotate(180deg) translateX(10px)">No Prize</span>
+        <span class="wheel-label" style="transform:rotate(231.4deg) translateX(10px)">50 Coins</span>
+        <span class="wheel-label" style="transform:rotate(282.9deg) translateX(10px)">10 💎</span>
+        <span class="wheel-label" style="transform:rotate(334.3deg) translateX(10px)">20 💎</span>
+      </div>
+      <div class="wheel-center">SPIN</div>
+    </div>
+
+    <p class="big" id="spinStatus">🎁 আজকের স্পিন অপেক্ষায়</p>
+    <p id="prizeMessage" class="muted">পুরস্কার পেতে Google Login করুন।</p>
+    <button id="spinBtn" class="full" onclick="spinLuckyDraw()">
+      🎡 স্পিন করুন — ফ্রি
+    </button>
+    <p class="muted">প্রতিদিন সর্বোচ্চ ১ বার। পুরস্কার সার্ভার যাচাই করে দেওয়া হবে।</p>
   </section>
 
   <h2 class="section-title" id="packages">💎 Diamond Packages</h2>
-  <p class="muted">দামগুলো নমুনা। নিজের আসল দাম বসিয়ে নেবে।</p>
-
+  <p class="muted">দামগুলো নমুনা। নিজের আসল দাম বসিয়ে নেবে।</p>
   <div class="grid" id="packageGrid"></div>
 
-  <section class="card" id="orderForm" style="margin-top:22px">
+  <section class="card" style="margin-top:22px">
     <h2>🛒 Place Your Order</h2>
     <p class="muted">অর্ডার করতে আগে Google Login করো।</p>
-
     <form id="purchaseForm">
       <label for="playerId">Free Fire Player UID</label>
       <input id="playerId" inputmode="numeric" maxlength="30"
@@ -130,81 +269,22 @@ TOP-UP-ZONE
         <option value="Other">Other - Contact Admin</option>
       </select>
 
-      <label for="trx">Transaction ID (পেমেন্ট করে থাকলে)</label>
+      <label for="trx">Transaction ID</label>
       <input id="trx" maxlength="100" placeholder="ঐচ্ছিক">
 
-      <button class="full" id="submitOrder" type="submit">
-        Confirm Order
-      </button>
+      <button class="full" id="submitOrder" type="submit">Confirm Order</button>
     </form>
   </section>
 
-  <section id="dashboard" class="card hidden" style="margin-top:22px">
+  <section id="dashboard" class="card hidden">
     <h2>📋 My Order History</h2>
     <div id="ordersList" class="muted">অর্ডার লোড হচ্ছে...</div>
   </section>
-  
-  main class="container">
 
-<!-- FREE COINS -->
-<section class="panel" id="freeCoins">
- <h2>🪙 MOHIN FREE COINS</h2>
-
- <div class="coins">
-  <p style="text-align:center;color:#d7ddf8">
-   বিজ্ঞাপন দেখে কয়েন জমাও!
-  </p>
-
-  <div class="balance">🪙 <span id="coinBalance">0</span></div>
-
-  <div class="stats">
-   <div class="stat">
-    আজকের বিজ্ঞাপন
-    <strong><span id="adCount">0</span>/10</strong>
-   </div>
-   <div class="stat">
-    রিডিম করতে লাগবে
-    <strong>1000 🪙</strong>
-   </div>
-  </div>
-
-  <button class="btn" id="watchAd">
-   ▶ বিজ্ঞাপন দেখে ১ কয়েন নিন
-  </button>
-
-  <p class="note" id="adMessage" style="text-align:center">
-   প্রতিদিন সর্বোচ্চ ১০টি বিজ্ঞাপন। ডেমো মোড।
-  </p>
-
-  <div class="warning">
-   ⚠️ এটি ডেমো। এই বাটন প্রকৃত বিজ্ঞাপন দেখায় না।
-   প্রকৃত বিজ্ঞাপন থেকে কয়েন দিতে Rewarded Ads নেটওয়ার্ক
-   ও সার্ভার যাচাই যুক্ত করতে হবে। ডেমোর কয়েন দিয়ে
-   বাস্তবে ডায়মন্ড পাওয়া যাবে না।
-  </div>
-
-  <hr style="border-color:#354565;margin:20px 0">
-
-  <h3 style="color:#ffe34d">💎 Diamond রিডিম আবেদন</h3>
-  <label class="field" for="redeemUid">Free Fire Player UID</label>
-  <input id="redeemUid" type="text" inputmode="numeric"
-   placeholder="Player UID লিখুন">
-
-  <button class="btn" id="redeemBtn">
-   1000 কয়েনে রিডিম আবেদন
-  </button>
-  <p class="note" id="redeemMessage">
-   ১০০০ কয়েন হলে আবেদন করার অপশন ব্যবহার করুন।
-  </p>
- </div>
-</section>
-
-
-  <section class="card" style="margin-top:22px">
+  <section class="card">
     <h2>📞 Help & Support</h2>
-    <p>অর্ডার বা পেমেন্টের সমস্যায় আমাদের সঙ্গে যোগাযোগ করুন।</p>
-    <!-- নিচে নিজের WhatsApp নম্বর বসাও -->
-    <a id="whatsappLink" href="https://wa.me/8801819214474"
+    <p>অর্ডার বা পেমেন্টের সমস্যায় যোগাযোগ করুন।</p>
+    <a href="https://wa.me/8801819214474"
        target="_blank" rel="noopener noreferrer">
       <button type="button">Contact on WhatsApp</button>
     </a>
@@ -214,23 +294,26 @@ TOP-UP-ZONE
 <footer>© 2026 MOHIN TOP UP | Fan-made top-up website</footer>
 
 <script type="module">
-  import { initializeApp } from
-    "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import { initializeApp } from
+  "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
 
-  import {
-    getAuth, GoogleAuthProvider, signInWithPopup,
-    signInWithRedirect, getRedirectResult, onAuthStateChanged, signOut
-  } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+import {
+  getAuth, GoogleAuthProvider, signInWithPopup,
+  signInWithRedirect, getRedirectResult,
+  onAuthStateChanged, signOut
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 
-  import {
-    getFirestore, doc, getDoc, setDoc, addDoc,
-    collection, query, where, getDocs, serverTimestamp
-  } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import {
+  getFirestore, doc, setDoc, addDoc,
+  collection, query, where, getDocs, serverTimestamp
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
-  // Firebase Console > Project settings > Your apps
-  // নিজের Firebase Web Config এখানে বসাও।
-  const firebaseConfig = {
-    apiKey: "AIzaSyDRaZ7evA0I7jJp7wXOqePTafkfeUkR6BU",
+import {
+  getFunctions, httpsCallable
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-functions.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDRaZ7evA0I7jJp7wXOqePTafkfeUkR6BU",
   authDomain: "mohin-topup-website.firebaseapp.com",
   databaseURL: "https://mohin-topup-website-default-rtdb.firebaseio.com",
   projectId: "mohin-topup-website",
@@ -238,229 +321,279 @@ TOP-UP-ZONE
   messagingSenderId: "386718268629",
   appId: "1:386718268629:web:0adb0680a265f95127765c",
   measurementId: "G-B6P0LRMCT2"
-  };
+};
 
-  // নিজের আসল প্যাকেজ ও দাম বসাও।
-  const packages = [
-    { id:"p1", name:"25 Diamonds", diamonds:25, price:25 },
-    { id:"p2", name:"50 Diamonds", diamonds:50, price:40 },
-    { id:"p3", name:"115 Diamonds", diamonds:115, price:80 },
-    { id:"p4", name:"240 Diamonds", diamonds:240, price:160 },
-    { id:"p5", name:"610 Diamonds", diamonds:610, price:390 },
-    { id:"p6", name:"1240 Diamonds", diamonds:1240, price:780 }
-  ];
+const packages = [
+  {id:"p1",name:"25 Diamonds",diamonds:25,price:25},
+  {id:"p2",name:"50 Diamonds",diamonds:50,price:40},
+  {id:"p3",name:"115 Diamonds",diamonds:115,price:80},
+  {id:"p4",name:"240 Diamonds",diamonds:240,price:160},
+  {id:"p5",name:"610 Diamonds",diamonds:610,price:390},
+  {id:"p6",name:"1240 Diamonds",diamonds:1240,price:780}
+];
 
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const db = getFirestore(app);
-  const provider = new GoogleAuthProvider();
-  provider.setCustomParameters({ prompt:"select_account" });
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const functions = getFunctions(app);
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({prompt:"select_account"});
 
-  let currentUser = null;
-  let busy = false;
+const callSpin = httpsCallable(functions,"spinLuckyDraw");
+let currentUser = null;
+let busy = false;
+let wheelRotation = 0;
+let alreadySpun = false;
 
-  const $ = id => document.getElementById(id);
-  const money = n => "৳" + Number(n).toLocaleString("en-BD");
+const $ = id => document.getElementById(id);
+const money = n => "৳" + Number(n).toLocaleString("en-BD");
 
-  function notify(message, error=false) {
-    $("notice").textContent = message;
-    $("notice").style.color = error ? "#ff8585" : "#8ff0b0";
-  }
+function notify(message,error=false) {
+  $("notice").textContent = message;
+  $("notice").style.color = error ? "#ff8585" : "#8ff0b0";
+}
+function safeText(value) {
+  return String(value ?? "").replace(/[&<>"']/g,c=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  })[c]);
+}
 
-  function safeText(value) {
-    return String(value ?? "").replace(/[&<>"']/g, c => ({
-      "&":"&amp;", "<":"&lt;", ">":"&gt;",
-      '"':"&quot;", "'":"&#39;"
-    })[c]);
-  }
-
-  function renderPackages() {
-    $("packageGrid").innerHTML = packages.map(p => `
-      <article class="card">
-        <div class="diamond">💎</div>
-        <h3>${safeText(p.name)}</h3>
-        <p class="price">${money(p.price)}</p>
-        <button class="full" data-package="${safeText(p.id)}">
-          Select Package
-        </button>
-      </article>`).join("");
-
-    $("package").innerHTML = packages.map(p =>
-      `<option value="${safeText(p.id)}">${safeText(p.name)} — ${money(p.price)}</option>`
-    ).join("");
-
-    $("packageGrid").addEventListener("click", event => {
-      const button = event.target.closest("[data-package]");
-      if (button) {
-        $("package").value = button.dataset.package;
-        $("orderForm").scrollIntoView({behavior:"smooth"});
+window.login = async () => {
+  try {
+    notify("Google Login চালু হচ্ছে...");
+    try {
+      await signInWithPopup(auth,provider);
+    } catch(e) {
+      if (["popup-blocked","popup-closed-by-user",
+           "operation-not-supported-in-this-environment"].includes(e.code)) {
+        await signInWithRedirect(auth,provider);
+        return;
       }
+      throw e;
+    }
+  } catch(e) { notify("Login ব্যর্থ: "+e.message,true); }
+};
+
+window.logout = async () => {
+  try { await signOut(auth); notify("Logout হয়েছে।"); }
+  catch(e) { notify("Logout ব্যর্থ: "+e.message,true); }
+};
+
+function renderPackages() {
+  $("packageGrid").innerHTML = packages.map(p=>`
+    <article class="card">
+      <div style="font-size:30px">💎</div>
+      <h3>${safeText(p.name)}</h3>
+      <p class="price">${money(p.price)}</p>
+      <button class="full" data-package="${p.id}">Select Package</button>
+    </article>`).join("");
+
+  $("package").innerHTML = packages.map(p=>
+    `<option value="${p.id}">${safeText(p.name)} — ${money(p.price)}</option>`
+  ).join("");
+
+  $("packageGrid").addEventListener("click",e=>{
+    const b=e.target.closest("[data-package]");
+    if(b) {
+      $("package").value=b.dataset.package;
+      $("playerId").scrollIntoView({behavior:"smooth"});
+    }
+  });
+}
+
+async function loadDashboard(user) {
+  try {
+    const q=query(collection(db,"orders"),where("uid","==",user.uid));
+    const snap=await getDocs(q);
+    let diamonds=0, completed=0;
+    const rows=[];
+    snap.forEach(item=>{
+      const o=item.data();
+      if(o.status==="completed") {
+        completed++;
+        diamonds+=Number(o.diamonds)||0;
+      }
+      rows.push(`<div class="order">
+        <b>${safeText(o.packageName||"Diamond Order")}</b>
+        <p>UID: ${safeText(o.playerId)}</p>
+        <p>মূল্য: ${money(o.price||0)}</p>
+        <p>পেমেন্ট: ${safeText(o.paymentMethod||"-")}</p>
+        <p>স্ট্যাটাস: ${safeText(o.status||"pending")}</p>
+        <small>Order ID: ${safeText(item.id)}</small>
+      </div>`);
     });
+    $("totalOrders").textContent=snap.size;
+    $("completedOrders").textContent=completed;
+    $("totalDiamonds").textContent=diamonds;
+    $("ordersList").innerHTML=rows.reverse().join("")||"এখনো কোনো অর্ডার নেই।";
+  } catch(e) {
+    $("ordersList").textContent="অর্ডার লোড হয়নি। Firestore Rules পরীক্ষা করুন।";
+    console.error(e);
   }
+}
 
-  window.login = async function() {
-    try {
-      notify("Google Login চালু হচ্ছে...");
-      try {
-        await signInWithPopup(auth, provider);
-      } catch (error) {
-        if (["popup-blocked", "popup-closed-by-user",
-             "operation-not-supported-in-this-environment"].includes(error.code)) {
-          await signInWithRedirect(auth, provider);
-          return;
-        }
-        throw error;
-      }
-    } catch (error) {
-      notify("Login ব্যর্থ: " + error.message, true);
-    }
-  };
-
-  window.logout = async function() {
-    try {
-      await signOut(auth);
-      notify("Logout হয়েছে।");
-    } catch (error) {
-      notify("Logout ব্যর্থ: " + error.message, true);
-    }
-  };
-
-  async function loadDashboard(user) {
-    $("ordersList").textContent = "অর্ডার লোড হচ্ছে...";
-    try {
-      // নিরাপদ নিয়ম: কেবল নিজের UID-এর অর্ডার পড়া।
-      const q = query(
-        collection(db, "orders"),
-        where("uid", "==", user.uid)
-      );
-      const snapshot = await getDocs(q);
-      let totalDiamonds = 0;
-      let completed = 0;
-      const rows = [];
-
-      snapshot.forEach(item => {
-        const o = item.data();
-        if (o.status === "completed") {
-          completed++;
-          totalDiamonds += Number(o.diamonds) || 0;
-        }
-
-        rows.push(`
-          <div class="order">
-            <b>${safeText(o.packageName || "Diamond Order")}</b>
-            <p>UID: ${safeText(o.playerId)}</p>
-            <p>মূল্য: ${money(o.price || 0)}</p>
-            <p>পেমেন্ট: ${safeText(o.paymentMethod || "-")}</p>
-            <p>স্ট্যাটাস: ${safeText(o.status || "pending")}</p>
-            <small>Order ID: ${safeText(item.id)}</small>
-          </div>`);
-      });
-
-      $("totalOrders").textContent = snapshot.size;
-      $("completedOrders").textContent = completed;
-      $("totalDiamonds").textContent = totalDiamonds;
-      $("ordersList").innerHTML =
-        rows.reverse().join("") || "এখনো কোনো অর্ডার নেই।";
-    } catch (error) {
-      $("ordersList").textContent =
-        "অর্ডার লোড হয়নি। Firestore Rules ও Firebase সংযোগ পরীক্ষা করো।";
-      console.error(error);
-    }
+window.spinLuckyDraw = async () => {
+  if(!currentUser) {
+    notify("প্রথমে Google Login করুন।",true);
+    return;
   }
+  if(busy || alreadySpun) return;
 
-  $("purchaseForm").addEventListener("submit", async event => {
-    event.preventDefault();
-    if (busy) return;
-
-    if (!currentUser) {
-      notify("প্রথমে Google Login করো।", true);
-      return;
-    }
-
-    const playerId = $("playerId").value.trim();
-    const selected = packages.find(p => p.id === $("package").value);
-    const trx = $("trx").value.trim();
-
-    if (!/^\d{5,30}$/.test(playerId)) {
-      notify("সঠিক Free Fire UID দাও (৫–৩০টি সংখ্যা)।", true);
-      return;
-    }
-    if (!selected) {
-      notify("একটি প্যাকেজ নির্বাচন করো।", true);
-      return;
-    }
-
-    busy = true;
-    $("submitOrder").disabled = true;
-
-    try {
-      // দাম/ডায়মন্ডের তথ্য এখানে UI থেকে নয়, কনফিগার করা
-      // প্যাকেজ তালিকা থেকে নেওয়া হচ্ছে। Production-এ সার্ভার যাচাই চাই।
-      const order = {
-        uid: currentUser.uid,
-        playerId,
-        server: $("server").value,
-        packageId: selected.id,
-        packageName: selected.name,
-        diamonds: selected.diamonds,
-        price: selected.price,
-        paymentMethod: $("payment").value,
-        transactionId: trx,
-        status: "pending",
-        createdAt: serverTimestamp()
-      };
-
-      const result = await addDoc(collection(db, "orders"), order);
-      notify("অর্ডার জমা হয়েছে!\nOrder ID: " + result.id +
-        "\nঅ্যাডমিন পেমেন্ট যাচাই করার পর অর্ডার সম্পন্ন হবে।");
-      $("trx").value = "";
-      await loadDashboard(currentUser);
-    } catch (error) {
-      console.error(error);
-      notify("অর্ডার জমা হয়নি। Firestore Rules ও সংযোগ পরীক্ষা করো।", true);
-    } finally {
-      busy = false;
-      $("submitOrder").disabled = false;
-    }
-  });
-
-  onAuthStateChanged(auth, async user => {
-    currentUser = user;
-
-    $("loginBtn").classList.toggle("hidden", !!user);
-    $("logoutBtn").classList.toggle("hidden", !user);
-    $("profile").classList.toggle("hidden", !user);
-    $("dashboard").classList.toggle("hidden", !user);
-
-    if (!user) return;
-
-    $("userName").textContent = user.displayName || "User";
-    $("userEmail").textContent = user.email || "";
-
-    try {
-      await setDoc(doc(db, "users", user.uid), {
-        uid: user.uid,
-        displayName: user.displayName || "",
-        email: user.email || "",
-        photoURL: user.photoURL || "",
-        lastLoginAt: serverTimestamp()
-      }, { merge:true });
-
-      await loadDashboard(user);
-      notify("Google Login সফল হয়েছে!");
-    } catch (error) {
-      console.error(error);
-      notify("প্রোফাইল বা Dashboard লোডে সমস্যা। Rules পরীক্ষা করো।", true);
-    }
-  });
-
-  renderPackages();
+  busy=true;
+  $("spinBtn").disabled=true;
+  $("spinStatus").textContent="🎡 চাকা ঘুরছে...";
+  $("prizeMessage").textContent="সার্ভার থেকে ফলাফল যাচাই করা হচ্ছে...";
 
   try {
-    await getRedirectResult(auth);
-  } catch (error) {
-    notify("Google Login সমস্যা: " + error.message, true);
+    // পুরস্কারের পরিমাণ সার্ভার নির্ধারণ করে।
+    const result=await callSpin({});
+    const data=result.data;
+
+    const prizeNames={
+      coins:"কয়েন",
+      diamonds:"ডায়মন্ড",
+      none:"এবার কোনো পুরস্কার নেই"
+    };
+
+    // সার্ভারের ফলাফলের সঙ্গে চাকার স্লাইসের নিখুঁত মিল
+    // নিশ্চিত করতে পরের আপডেটে পুরস্কারের index ফেরত দেওয়া যাবে।
+    wheelRotation+=1800+Math.random()*360;
+    $("wheel").style.transform=`rotate(${wheelRotation}deg)`;
+
+    await new Promise(resolve=>setTimeout(resolve,5100));
+
+    alreadySpun=true;
+    $("spinStatus").textContent="🎉 স্পিন সম্পন্ন!";
+    $("prizeMessage").textContent=data.prizeType==="none"
+      ? "এবার কোনো পুরস্কার জেতা হয়নি। আগামীকাল আবার চেষ্টা করুন।"
+      : `আপনি ${data.amount} ${prizeNames[data.prizeType]||"পুরস্কার"} পেয়েছেন!`;
+
+    $("spinBtn").textContent="আজকের স্পিন শেষ";
+    notify("Lucky Draw সফল হয়েছে!");
+  } catch(e) {
+    console.error(e);
+    $("spinStatus").textContent="স্পিন সম্পন্ন হয়নি";
+    $("prizeMessage").textContent=e.code==="functions/already-exists"
+      ? "আজকের স্পিন ব্যবহার করা হয়েছে। আগামীকাল আবার আসুন।"
+      : "স্পিন ব্যর্থ। সার্ভার সেটআপ ও ইন্টারনেট পরীক্ষা করুন।";
+    notify("Lucky Draw: "+(e.message||"সমস্যা হয়েছে"),true);
+  } finally {
+    busy=false;
+    if(!alreadySpun) $("spinBtn").disabled=false;
   }
+};
+
+$("purchaseForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  if(busy) return;
+  if(!currentUser) { notify("প্রথমে Google Login করুন।",true);return; }
+
+  const playerId=$("playerId").value.trim();
+  const selected=packages.find(p=>p.id===$("package").value);
+  if(!/^\d{5,30}$/.test(playerId)) {
+    notify("সঠিক Free Fire UID দিন।",true);return;
+  }
+  if(!selected) { notify("প্যাকেজ নির্বাচন করুন।",true);return; }
+
+  busy=true;
+  $("submitOrder").disabled=true;
+  try {
+    const result=await addDoc(collection(db,"orders"),{
+      uid:currentUser.uid,
+      playerId,
+      server:$("server").value,
+      packageId:selected.id,
+      packageName:selected.name,
+      diamonds:selected.diamonds,
+      price:selected.price,
+      paymentMethod:$("payment").value,
+      transactionId:$("trx").value.trim(),
+      status:"pending",
+      createdAt:serverTimestamp()
+    });
+    notify("অর্ডার জমা হয়েছে!\nOrder ID: "+result.id);
+    $("trx").value="";
+    await loadDashboard(currentUser);
+  } catch(e) {
+    console.error(e);
+    notify("অর্ডার জমা হয়নি। Firestore Rules পরীক্ষা করুন।",true);
+  } finally {
+    busy=false;
+    $("submitOrder").disabled=false;
+  }
+});
+
+onAuthStateChanged(auth,async user=>{
+  currentUser=user;
+  $("loginBtn").classList.toggle("hidden",!!user);
+  $("logoutBtn").classList.toggle("hidden",!user);
+  $("profile").classList.toggle("hidden",!user);
+  $("dashboard").classList.toggle("hidden",!user);
+
+  if(!user) {
+    $("userName").textContent="";
+    $("userEmail").textContent="";
+    $("spinStatus").textContent="🎁 আজকের স্পিন অপেক্ষায়";
+    $("prizeMessage").textContent="পুরস্কার পেতে Google Login করুন।";
+    return;
+  }
+
+  $("userName").textContent=user.displayName||"User";
+  $("userEmail").textContent=user.email||"";
+
+  try {
+    await setDoc(doc(db,"users",user.uid),{
+      uid:user.uid,
+      displayName:user.displayName||"",
+      email:user.email||"",
+      photoURL:user.photoURL||"",
+      lastLoginAt:serverTimestamp()
+    },{merge:true});
+
+    await loadDashboard(user);
+    notify("Google Login সফল হয়েছে!");
+  } catch(e) {
+    console.error(e);
+    notify("প্রোফাইল লোডে সমস্যা। Rules পরীক্ষা করুন।",true);
+  }
+});
+
+renderPackages();
+
+try { await getRedirectResult(auth); }
+catch(e) { notify("Google Login সমস্যা: "+e.message,true); }
 </script>
 </body>
 </html>
+<!-- FREE COINS -->  <section class="panel" id="freeCoins">  
+ <h2>🪙 MOHIN FREE COINS</h2>   <div class="coins">  
+  <p style="text-align:center;color:#d7ddf8">  
+   বিজ্ঞাপন দেখে কয়েন জমাও!  
+  </p>    <div class="balance">🪙 <span id="coinBalance">0</span></div>    <div class="stats">  
+   <div class="stat">  
+    আজকের বিজ্ঞাপন  
+    <strong><span id="adCount">0</span>/10</strong>  
+   </div>  
+   <div class="stat">  
+    রিডিম করতে লাগবে  
+    <strong>1000 🪙</strong>  
+   </div>  
+  </div>    <button class="btn" id="watchAd">  
+   ▶ বিজ্ঞাপন দেখে ১ কয়েন নিন  
+  </button>    <p class="note" id="adMessage" style="text-align:center">  
+   প্রতিদিন সর্বোচ্চ ১০টি বিজ্ঞাপন। ডেমো মোড।  
+  </p>    <div class="warning">  
+   ⚠️ এটি ডেমো। এই বাটন প্রকৃত বিজ্ঞাপন দেখায় না।  
+   প্রকৃত বিজ্ঞাপন থেকে কয়েন দিতে Rewarded Ads নেটওয়ার্ক  
+   ও সার্ভার যাচাই যুক্ত করতে হবে। ডেমোর কয়েন দিয়ে  
+   বাস্তবে ডায়মন্ড পাওয়া যাবে না।  
+  </div>    <hr style="border-color:#354565;margin:20px 0">    <h3 style="color:#ffe34d">💎 Diamond রিডিম আবেদন</h3>  
+  <label class="field" for="redeemUid">Free Fire Player UID</label>  
+  <input id="redeemUid" type="text" inputmode="numeric"  
+   placeholder="Player UID লিখুন">    <button class="btn" id="redeemBtn">  
+   1000 কয়েনে রিডিম আবেদন  
+  </button>  
+  <p class="note" id="redeemMessage">  
+   ১০০০ কয়েন হলে আবেদন করার অপশন ব্যবহার করুন।  
+  </p>  
+ </div>  
