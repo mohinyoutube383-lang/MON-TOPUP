@@ -457,8 +457,18 @@ window.spinLuckyDraw = async () => {
 
     // সার্ভারের ফলাফলের সঙ্গে চাকার স্লাইসের নিখুঁত মিল
     // নিশ্চিত করতে পরের আপডেটে পুরস্কারের index ফেরত দেওয়া যাবে।
-    wheelRotation+=1800+Math.random()*360;
-    $("wheel").style.transform=`rotate(${wheelRotation}deg)`;
+    
+    const wheel = $("wheel");
+
+wheelRotation += 1800 + Math.random() * 360;
+
+wheel.style.transition = "none";
+wheel.style.transform = `rotate(${wheelRotation - 1800}deg)`;
+
+void wheel.offsetWidth;
+
+wheel.style.transition = "transform 5s cubic-bezier(.12,.72,.12,1)";
+wheel.style.transform = `rotate(${wheelRotation}deg)`;
 
     await new Promise(resolve=>setTimeout(resolve,5100));
 
