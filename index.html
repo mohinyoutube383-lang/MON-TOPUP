@@ -433,6 +433,94 @@ async function loadDashboard(user) {
 }
 
 window.spinLuckyDraw = async () => {
+  if (!currentUser) {
+    notify("প্রথমে Google Login করুন।", true);
+    return;
+  }
+
+  if (busy || alreadySpun) return;
+
+  // প্রতিদিন একবারের ডেমো সীমা
+  const today = new Date().toLocaleDateString("en-CA");
+  const storageKey = "mohinLuckyDemo_" + currentUser.uid;
+
+  if (localStorage.getItem(storageKey) === today) {
+    alreadySpun = true;
+    $("spinStatus").textContent = "আজকের স্পিন শেষ!";
+    $("prizeMessage").textContent =
+      "আগামীকাল আবার চেষ্টা করুন।";
+    $("spinBtn").disabled = true;
+    $("spinBtn").textContent = "আজকের স্পিন শেষ";
+    return;
+  }
+
+  busy = true;
+  $("spinBtn").disabled = true;
+  $("spinStatus").textContent = "🎡 চাকা ঘুরছে...";
+  $("prizeMessage").textContent = "ডেমো পুরস্কার নির্ধারণ হচ্ছে...";
+
+  try {
+    // এটি শুধু ডেমো; সার্ভার পুরস্কার নয়
+    const prizes = [
+      { type: "coins", amount: 10, index: 0 },
+      { type: "coins", amount: 20, index: 1 },
+      { type: "diamonds", amount: 5, index: 2 },
+      { type: "none", amount: 0, index: 3 },
+      { type: "coins", amount: 50, index: 4 },
+      { type: "diamonds", amount: 10, index: 5 },
+      { type: "diamonds", amount: 20, index: 6 }
+    ];
+
+    const prize = prizes[
+      Math.floor(Math.random() * prizes.length)
+    ];
+
+    // চাকার স্লাইসের মাঝখানে থামানোর হিসাব
+    const sliceAngle = 360 / 7;
+    const targetAngle =
+      360 - (prize.index * sliceAngle + sliceAngle / 2);
+
+    const currentAngle = wheelRotation % 360;
+    const extraAngle =
+      (targetAngle - currentAngle + 360) % 360;
+
+    wheelRotation += 1800 + extraAngle;
+    $("wheel").style.transform =
+      `rotate(${wheelRotation}deg)`;
+
+    await new Promise(resolve => setTimeout(resolve, 5200));
+
+    localStorage.setItem(storageKey, today);
+    alreadySpun = true;
+
+    $("spinStatus").textContent = "🎉 ডেমো স্পিন সম্পন্ন!";
+
+    const prizeNames = {
+      coins: "Coins",
+      diamonds: "Diamonds",
+      none: "কোনো পুরস্কার নেই"
+    };
+
+    $("prizeMessage").textContent =
+      prize.type === "none"
+        ? "ডেমো: এবার কোনো পুরস্কার নেই।"
+        : `ডেমো পুরস্কার: ${prize.amount} ${prizeNames[prize.type]}`;
+
+    $("spinBtn").textContent = "আজকের স্পিন শেষ";
+    notify("ডেমো Lucky Draw সম্পন্ন হয়েছে!");
+  } catch (e) {
+    console.error(e);
+    $("spinStatus").textContent = "স্পিন সম্পন্ন হয়নি";
+    $("prizeMessage").textContent =
+      "আবার চেষ্টা করুন।";
+    notify("ডেমো স্পিনে সমস্যা হয়েছে।", true);
+  } finally {
+    busy = false;
+    if (!alreadySpun) {
+      $("spinBtn").disabled = false;
+    }
+  }
+};
   if(!currentUser) {
     notify("প্রথমে Google Login করুন।",true);
     return;
